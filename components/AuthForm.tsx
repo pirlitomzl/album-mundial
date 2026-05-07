@@ -29,7 +29,7 @@ export default function AuthForm({ initialStep = "form" }: { initialStep?: "form
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [step, setStep] = useState<"form" | "verify">(initialStep);
-
+  const [showPassword, setShowPassword] = useState(false);
   const submit = async () => {
     try {
       setError("");
@@ -144,13 +144,22 @@ export default function AuthForm({ initialStep = "form" }: { initialStep?: "form
           className="w-full p-3 mb-3 rounded-xl bg-black/30"
         />
 
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 mb-3 rounded-xl bg-black/30"
-        />
+        <div className="relative mb-3">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-3 rounded-xl bg-black/30 pr-12"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition"
+          >
+            {showPassword ? "🙈" : "👁️"}
+          </button>
+        </div>
 
         {error && <p className="text-red-400 text-sm mb-3">{error}</p>}
 

@@ -312,12 +312,12 @@ const unsubTrades = onSnapshot(qTrades, (snap) => {
 
       {/* COMUNIDAD */}
       <div className="bg-white/10 rounded-3xl p-5 mb-8 border border-white/5">
-        <h2 className="text-xl font-bold mb-4 text-blue-400">👥 Comunidad</h2>
+        <h2 className="text-xl font-bold mb-4 text-blue-400">👥 TRCS</h2>
         <div className="flex gap-2 mb-6">
           <input 
             value={friendUsername} 
             onChange={(e) => setFriendUsername(e.target.value)} 
-            placeholder="Username..." 
+            placeholder="Ingresa el username respetando Mayusculas" 
             className="flex-1 p-4 rounded-2xl bg-black/30 border border-white/10 outline-none"
           />
           <button onClick={sendFriendRequest} className="bg-blue-600 px-6 rounded-2xl font-bold">Agregar</button>
