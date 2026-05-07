@@ -317,7 +317,7 @@ const unsubTrades = onSnapshot(qTrades, (snap) => {
           <input 
             value={friendUsername} 
             onChange={(e) => setFriendUsername(e.target.value)} 
-            placeholder="Ingresa el username respetando Mayusculas" 
+            placeholder="Ingresa el uIngrese aquí el username respetando mayúsculas" 
             className="flex-1 p-4 rounded-2xl bg-black/30 border border-white/10 outline-none"
           />
           <button onClick={sendFriendRequest} className="bg-blue-600 px-6 rounded-2xl font-bold">Agregar</button>
