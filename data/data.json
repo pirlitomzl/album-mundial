@@ -1,4 +1,5 @@
 [
+  { "numero": "00", "nombre": "PANINI", "pais": "Global", "tipo": "Especial" },
   { "numero": "FWC1", "nombre": "Pendiente", "pais": "Global", "tipo": "Especial" },
   { "numero": "FWC2", "nombre": "Pendiente", "pais": "Global", "tipo": "Especial" },
   { "numero": "FWC3", "nombre": "Pendiente", "pais": "Global", "tipo": "Especial" },
